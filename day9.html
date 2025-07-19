@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Registration Form</title>
+    <link rel="stylesheet" href="day9.css" />
+</head>
+<body>
+    <div class="container">
+        <form id="registrationForm" novalidate>
+            <h2>Registration Form</h2>
+
+            <div class="details">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" required />
+                <span class="error" id="fullNameError">Please enter your full name.</span>
+            </div>
+
+            <div class="details">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+                <span class="error" id="emailError">Enter a valid email address.</span>
+            </div>
+
+            <div class="details">
+                <label for="password">Password</label>
+                     
+                <div class="password-wrapper">
+                      <input id="password" name="password" type="password" required />
+                     <button type="button" id="togglePassword" style="width: 100%">Show</button>
+                </div>
+                <div id="strength"></div>
+                <span class="error" id="passwordError">It must contain 8+ characters (an uppercase,lowercase,number,symbol).</span> 
+            </div>
+
+            <div class="details">
+                <label for="phone">Phone Number(+91)</label>
+                <input id="phone" name="phone" type="tel" maxlength="10" required />
+                <span class="error" id="phoneError">Enter a valid 10-digit phone number.</span>
+            </div>
+                
+            <!-- Gender (radio buttons) -->
+           <div class="formGroup">
+             <label>Gender</label>
+             <div class="radio-group">
+               <label class="radio-option">
+                <input type="radio" name="gender" value="male" />
+                <span>Male</span>
+               </label>
+               <label class="radio-option">
+                <input type="radio" name="gender" value="female" />
+                <span>Female</span>
+               </label>
+               <label class="radio-option">
+                <input type="radio" name="gender" value="other" />
+                <span>Other</span>
+               </label>
+             </div>
+             <span class="error"></span>
+           </div>
+
+            <div class="details">
+                <label for="city" class="city">City</label>
+                <select id="city" name="city" required >
+                    <option value="">--Select--</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Bangalore">Bangalore</option>
+                </select>
+            </div>
+
+            <div class="details">
+                <input type="checkbox" id="terms" required />
+                  <label for="terms">I agree to the Terms & Conditions.</label>
+                 <span class="error"></span>
+            </div>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+            <p id="successMessage"></p>
+        </form>
+    </div>
+
+    <script src="day9.js"></script>
+    
+</body>
+</html>
